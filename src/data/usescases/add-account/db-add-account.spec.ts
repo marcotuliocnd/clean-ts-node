@@ -71,7 +71,7 @@ describe('DbAddAccount Usecase', () => {
     }
 
     const promise = sut.add(accountData)
-    expect(promise).rejects.toThrow()
+    await expect(promise).rejects.toThrow()
   })
 
   test('should call AddAccountRepository with correct values', async () => {
@@ -101,7 +101,7 @@ describe('DbAddAccount Usecase', () => {
     }
 
     const promise = sut.add(accountData)
-    expect(promise).rejects.toThrow()
+    await expect(promise).rejects.toThrow()
   })
 
   test('should return an account if all values are correct', async () => {
